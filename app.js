@@ -44,6 +44,8 @@ const randomBtn = document.querySelector(".random-btn");
 window.addEventListener("DOMContentLoaded", function () {
   showPerson();
 });
+// !Set starting item
+let currentItem = 0;
 
 // !Show person based on item
 function showPerson() {
@@ -53,8 +55,6 @@ function showPerson() {
   job.textContent = item.job;
   info.textContent = item.text;
 }
-// !Set starting item
-let currentItem = 0;
 
 // !Show Next
 nexBtn.addEventListener("click", function () {
@@ -81,5 +81,5 @@ randomBtn.addEventListener("click", function () {
 });
 
 function randomNumber() {
-  return Math.floor(Math.random() * 3) + 1;
+  return Math.floor(Math.random() * reviews.length);
 }
